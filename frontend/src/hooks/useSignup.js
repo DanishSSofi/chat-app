@@ -9,7 +9,7 @@ const useSignup = ()=>{
     const signup =async ({fullName,username,password,confirmPassword,gender})=>{
        const success=  handleInputError({fullName,username,password,confirmPassword,gender})
         if(!success) {
-            toast.error("dfjaf")
+            return;
         }
         try{
             const res = await fetch("http://localhost:5000/api/auth/signup",{
@@ -41,9 +41,7 @@ export default useSignup
 function handleInputError({fullName,username,password,confirmPassword,gender}){
     if(!fullName || !username || !password || !confirmPassword || !gender){
         toast.error("Please fill all the fields")
-        return false
-
-        
+        return false 
     }
 
     if(password !== confirmPassword){
