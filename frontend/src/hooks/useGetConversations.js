@@ -13,6 +13,12 @@ const useGetConversations = () => {
                 if (!res.ok) {
                     throw new Error(`Failed to fetch conversations: ${res.statusText}`);
                 }
+                
+                const contentType = res.headers.get("content-type");
+                if (!contentType || !contentType.includes("application/json")) {
+                    throw new Error("Response is not JSON");
+                }
+
                 const data = await res.json();
                 if (data.error) {
                     throw new Error(data.error);
