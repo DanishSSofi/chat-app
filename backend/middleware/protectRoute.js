@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import User from '../models/user.models.js';
 import dotenv from "dotenv";
 dotenv.config();
-
+//git
 const protectRoute = async(req,res,next)=>{
     try{
 
