@@ -24,12 +24,12 @@ function SearchInput() {
             toast.error("No such user found");
     }
     return (
-        <form className="flex items-center gap-2" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Search" className="input input-bordered rounded-full w-full max-w-xs" 
+        <form className="flex items-center gap-2 " onSubmit={handleSubmit}>
+            <input type="text" placeholder="Search" className=" input input-bordered rounded-full w-full max-w-xs" 
             value={search}
             onChange={(e)=> setSearch(e.target.value)}
             />
-            <button type="submit" className="btn btn-circle  bg-sky-500 text-white"><FaSearch/> </button>
+            <button type="submit" className="btn btn-circle bg-transparent border-none text-white w-5 h-5 hover:bg-slate-800"><FaSearch/> </button>
         </form>
     )
 }

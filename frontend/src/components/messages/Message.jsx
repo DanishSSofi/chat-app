@@ -13,13 +13,13 @@ function Message({message}) {
     return (
         <div className={`chat ${chatClassName}`}>
             <div className=" chat-image avatar">
-                <div className=" w-10 rounded-full">
+                <div className=" w-6 md:w-10 rounded-full">
                     <img src={profilePic}
 							alt='user avatar'/>
 
                 </div>
             </div>
-            <div className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass}`}>
+            <div className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass} text-xs min-h-1 md:min-h-[2.2rem]`}>
                 {message.message}
             </div>
             <div className="chat-footer opacity-50 text-xs flex gap-1 items-center">{formattedTime}</div>

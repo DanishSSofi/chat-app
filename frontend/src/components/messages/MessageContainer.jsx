@@ -4,7 +4,7 @@ import MessageInput from "./MessageInput";
 import Messages from "./Messages";
 import { TiMessages } from "react-icons/ti";
 import { useAuthContext } from "../../context/AuthContext";
-const MessageContainer = () => {
+const MessageContainer = ({toggleSidebar}) => {
 	const{selectedConversation,setSelectedConversation}= useConversation();
 
 	useEffect(()=>{
@@ -12,7 +12,8 @@ const MessageContainer = () => {
 		return ()=> setSelectedConversation(null);
 	},[setSelectedConversation])
 	return (
-		<div className='md:min-w-[450px] flex flex-col bg-slate-800'>
+		<div className='w-[300px] md:min-w-[450px] flex flex-col bg-slate-800'>
+			<button onClick={toggleSidebar} className=" fixed absolute top-11 right-2 bg-slate-600 rounded rounded-sm text-xs p-1 z-10" >Menu</button>
 			{!selectedConversation ? (<NoChatSelected/>) :
             (<>
             {/* Header */}

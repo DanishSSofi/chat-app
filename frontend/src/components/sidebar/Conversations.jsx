@@ -1,3 +1,4 @@
+
 import useGetConversations from "../../hooks/useGetConversations";
 import Conversation from "../Conversation"
 
@@ -10,9 +11,10 @@ function Conversations() {
                     key={conversation._id}
                     conversation = {conversation}
                     lastIdx = {idx  === conversations.length -1}
+                    
                 />
             ))}
-            {loading ? <span className="loading loading-spinner"></span> : null}
+            {loading ? <span className="loading loading-spinner text-center"></span> : null}
             
         </div>
     )

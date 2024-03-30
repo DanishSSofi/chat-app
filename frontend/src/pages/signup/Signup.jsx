@@ -26,8 +26,8 @@ function Signup() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-w-96 mx-auto bg-slate-800 rounded-md">
-      <div className="w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
+    <div className="flex flex-col items-center justify-center md:min-w-96 mx-auto bg-slate-800 rounded-md">
+      <div className="w-full   p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
         <h1 className="text-3xl font-semibold text-center text-gray-300">
           SignUp <span className="text-blue-300">ChatApp</span>
         </h1>
@@ -88,8 +88,8 @@ function Signup() {
 
           {/* gender checkbox */}
           <Gendercheckbox onCheckBoxChange={handleCheckBoxChange} selectedGender={inputs.gender}/>
-          <Link to="/login" className="link link-hover mt-4 ml-1">
-            Already have an account
+          <Link to="/login" className="link link-hover mt-4 ml-1 text-sm">
+            Already have an account? Signin
           </Link>
           <div>
             <button type="submit" className="btn btn-block btn-sm mt-5" disabled={loading}>
