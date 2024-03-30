@@ -12,6 +12,7 @@ const useSignup = ()=>{
             return;
         }
         setLoading(true);
+        
         try{
             const res = await fetch("http://localhost:5000/api/auth/signup",{
                 method:"POST",
@@ -28,7 +29,7 @@ const useSignup = ()=>{
             setAuthUser(data);
 
             // console.log("this is data :",data)
-            
+
         }catch(error){
             toast.error(error.message)
         }finally{
