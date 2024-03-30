@@ -1,6 +1,0 @@
-username dbashir84
-pass 65iQuZc35Re0EvgV
-
-api {
-    avatar for profile pics : https://avatar-placeholder.iran.liara.run/
-}

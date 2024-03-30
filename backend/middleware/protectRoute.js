@@ -1,5 +1,7 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/user.models.js';
+import dotenv from "dotenv";
+dotenv.config();
 
 const protectRoute = async(req,res,next)=>{
     try{
@@ -8,7 +10,7 @@ const protectRoute = async(req,res,next)=>{
         if(!token){
             return res.status(401).json({error:"Unauthorized : No token provided"})
         }
-        const decoded = jwt.verify(token,"ng98HPp24mcttM/TXIlSzu3Hmo9/LGMOINBXq+CAA50=");
+        const decoded = jwt.verify(token,JWT_SECRET);
 
         if(!decoded){
             return res.status(401).json({error:"Unauthorized : Invalid Token"});
