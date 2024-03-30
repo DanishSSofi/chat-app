@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin:["http://localhost:3000",'https://connectus-b6mr.onrender.com'],
 }));
 app.use("/api/auth/",authRoutes);
 app.use("/api/message/",messageRoutes);
