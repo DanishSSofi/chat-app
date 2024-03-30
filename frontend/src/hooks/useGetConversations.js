@@ -16,7 +16,7 @@ const useGetConversations = () => {
 				}
 				setConversations(data);
 			} catch (error) {
-				toast.error(error.message);
+				toast.error("get conversation error",error.message);
 			} finally {
 				setLoading(false);
 			}
