@@ -13,6 +13,7 @@ function Signup() {
   });
 
   const {loading , signup} = useSignup();
+  
   const handleCheckBoxChange= (gender)=>{
     setInputs({...inputs,gender});
   }
