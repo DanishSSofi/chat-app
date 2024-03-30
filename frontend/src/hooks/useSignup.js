@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { useAuthContext } from "../context/AuthContext";
 
 const useSignup = ()=>{
-    const [loading,setLoading] = useState("false"); 
+    const [loading,setLoading] = useState(false); 
     const {setAuthUser} = useAuthContext();
 
     const signup =async ({fullName,username,password,confirmPassword,gender})=>{
@@ -11,6 +11,7 @@ const useSignup = ()=>{
         if(!success) {
             return;
         }
+        setLoading(true);
         try{
             const res = await fetch("http://localhost:5000/api/auth/signup",{
                 method:"POST",
@@ -26,7 +27,7 @@ const useSignup = ()=>{
             //context
             setAuthUser(data);
 
-            console.log("this is data :",data)
+            // console.log("this is data :",data)
         }catch(error){
             toast.error(error.message)
         }finally{
