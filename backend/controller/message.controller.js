@@ -3,6 +3,7 @@ import Message from "../models/message.models.js";
 import { getRecieverSocketId, io } from "../socket/socket.js";
 
 
+
 export const sendMessage = async (req,res)=>{
     try{
         const {message}=req.body;
