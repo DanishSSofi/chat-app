@@ -26,7 +26,6 @@ const MessageContainer = () => {
 		</div>
 	);
 };
-
 export default MessageContainer;
 
 const NoChatSelected = () => {
