@@ -6,7 +6,8 @@
   "scripts": {
     "server": "nodemon backend/server.js",
     "start": "node backend/server.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "test": "mocha"
   },
   "type": "module",
   "keywords": [],
@@ -25,5 +26,8 @@
     "react-hot-toast": "^2.4.1",
     "socket.io": "^4.7.4",
     "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.4.0"
   }
 }
