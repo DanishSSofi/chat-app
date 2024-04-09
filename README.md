@@ -1,4 +1,4 @@
-# MERN Stack Project: Build and Deploy a Real Time Chat App | JWT, Socket.io
+# ConnectUS | A real time chat app
 
 ![1](https://github.com/DanishSofii/chat-app/assets/146963321/c7daeb7d-b90a-4a5e-be8e-701e6b04969b)
 
